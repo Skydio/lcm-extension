@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "scopeName": "source.lcm",
+  "name": "LCM",
+  "patterns": [
+    {
+      "match": "\\b(?:package|enum|struct)\\b",
+      "name": "keyword.control.lcm"
+    },
+    {
+      "match": "\\b(?:int8_t|int16_t|int32_t|int64_t|uint8_t|uint16_t|uint32_t|uint64_t|sfixed32|ufixed32|sfixed64|ufixed64|float|double|boolean|byte|string)\\b",
+      "name": "storage.type.primitive.lcm"
+    },
+    {
+      "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\.[A-Za-z_][A-Za-z0-9_]*\\b",
+      "name": "support.type.external.lcm"
+    },
+    {
+      "match": "(?<=enum\\s+)[A-Za-z_][A-Za-z0-9_]*",
+      "name": "entity.name.type.enum.lcm"
+    },
+    {
+      "match": "\\b[A-Z_][A-Z0-9_]*\\b(?=\\s*=)",
+      "name": "constant.language.enum-value.lcm"
+    },
+    {
+      "match": "#\\w+",
+      "name": "keyword.annotation.lcm"
+    },
+    {
+      "match": "//.*$",
+      "name": "comment.line.lcm"
+    },
+    {
+      "begin": "/\\*",
+      "end": "\\*/",
+      "name": "comment.block.lcm"
+    },
+    {
+      "match": "\\b-?(?:0x[a-fA-F0-9]+|0b[01]+|\\d+)\\b",
+      "name": "constant.numeric.lcm"
+    },
+    {
+      "match": "\\btrue|false\\b",
+      "name": "constant.language.boolean.lcm"
+    },
+    {
+      "match": "\"(?:\\\\.|[^\\\\\"])*\"",
+      "name": "string.quoted.double.lcm"
+    },
+    {
+      "match": "(?<=struct\\s+)[A-Za-z_][A-Za-z0-9_]*",
+      "name": "entity.name.type.struct.lcm"
+    },
+    {
+      "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b(?=\\s+\\w+\\s*[=;\\[])",
+      "name": "entity.name.type.field-type.lcm"
+    },
+    {
+      "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+      "name": "entity.name.variable.struct-field.lcm"
+    }
+  ]
+}

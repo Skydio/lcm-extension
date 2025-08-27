@@ -1,0 +1,40 @@
+{
+  "name": "lcm",
+  "displayName": "LCM",
+  "description": "Language support for LCM (Lightweight Communications and Marshalling)",
+  "version": "0.0.1",
+  "publisher": "skydio",
+  "icon": "images/lcm.png",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Skydio/lcm-extension.git"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "lcm",
+        "aliases": [
+          "LCM",
+          "lcm"
+        ],
+        "extensions": [
+          ".lcm"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "lcm",
+        "scopeName": "source.lcm",
+        "path": "./syntaxes/lcm.tmLanguage.json"
+      }
+    ]
+  }
+}
